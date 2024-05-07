@@ -1,4 +1,4 @@
-using System;
+using System.Text;
 
 namespace Utils
 {
@@ -18,5 +18,17 @@ namespace Utils
     public string? comments_url { set; get; }
     public string? html_url { set; get; }
     public string? mailestone { set; get; }
+
+    public override string ToString()
+    {
+      var results = new StringBuilder();
+      var properties = typeof(JsonIssue).GetProperties();
+      foreach (var property in properties)
+      {
+        var value = property.GetValue(this);
+        results.AppendLine($"{property.Name}:{value}");
+      }
+      return results.ToString();
+    }
   }
 }

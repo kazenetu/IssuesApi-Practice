@@ -1,4 +1,4 @@
-﻿internal class Program
+internal class Program
 {
     /// <summary>
     /// エントリメソッド
