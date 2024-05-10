@@ -21,6 +21,7 @@ internal class Program
 
         foreach (var issues in issuesResult)
         {
+            Console.WriteLine("-------------");
             Console.WriteLine(issues);
         }
     }
